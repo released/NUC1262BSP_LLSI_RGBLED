@@ -7,46 +7,46 @@ update @ 2021/11/15
 
 2. Scenario : fill EACH LED color data into LLSIDataBuffer , and output by PDMA (refer to API : setLED_Display)
 
-		- one LED need 3 BYTES (R , G , B) to display the color , one uint32_t could fill 4 bytes (uint8_t)
+> one LED need 3 BYTES (R , G , B) to display the color , one uint32_t could fill 4 bytes (uint8_t)
 		
-		- refer to API : setLED_ColorArrange
+> refer to API : setLED_ColorArrange
 		
-		-- 32 bit :
+>> 32 bit :
 		
-		31	30	29	28	27	26	25	24
+    31	30	29	28	27	26	25	24
 		
-			==> R1 data ( next LED)
+    ==> R1 data ( next LED)
 			
-		23	22	21	20	19	18	17	16
+    23	22	21	20	19	18	17	16
 		
-			==>	B0 data
+    ==>	B0 data
 			
-		15	14	13	12	11	10	9	8
+    15	14	13	12	11	10	9	8
 			
-			==> G0 data
+    ==> G0 data
 			
-		7	6	5	4	3	2	1	0
+    7	6	5	4	3	2	1	0
 		
-			==> R0 data (R0 ~ R7)
+    ==> R0 data (R0 ~ R7)
 
 
-		-- extend to uint32_t array size
+>> extend to uint32_t array size
 
-				LSB :  0	8	 16	   24 MSB	
+    LSB :  0	8	 16	   24 MSB	
 				
-		uint32_t 00 : [R0 , G0 , B0] , [R1
+    uint32_t 00 : [R0 , G0 , B0] , [R1
 		
-		uint32_t 01 : G1 , B1] , [R2 , G2
+    uint32_t 01 : G1 , B1] , [R2 , G2
 		
-		uint32_t 02 : B2] , [R3 , G3 , B3]
+    uint32_t 02 : B2] , [R3 , G3 , B3]
 		
-		---------------------------------
+    ---------------------------------
 		
-		uint32_t 03 : [R4 , G4 , B4] , [R5 
+    uint32_t 03 : [R4 , G4 , B4] , [R5 
 		
-		uint32_t 04 : G5 , B5] , [R6 , G6 
+    uint32_t 04 : G5 , B5] , [R6 , G6 
 		
-		uint32_t 05 : B6] , [R7 , G7 , B7] 
+    uint32_t 05 : B6] , [R7 , G7 , B7] 
 
 
 3. how to calculate correct require array size with LED numbers
@@ -71,5 +71,6 @@ refer to video under the folder : 0.ENABLE_DEBUG_WS2812_PROTOCOL.MOV
 
 refer to video under the folder 
 
-1.state_Rainbow.MOV
+![image](https://github.com/released/NUC1262BSP_LLSI_RGBLED/blob/main/1.state_Rainbow.MOV)
+
 
