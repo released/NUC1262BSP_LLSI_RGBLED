@@ -71,6 +71,6 @@ refer to video under the folder : 0.ENABLE_DEBUG_WS2812_PROTOCOL.MOV
 
 refer to video under the folder 
 
-![image](https://github.com/released/NUC1262BSP_LLSI_RGBLED/blob/main/1.state_Rainbow.MOV)
+![video](https://github.com/released/NUC1262BSP_LLSI_RGBLED/blob/main/1.state_Rainbow.MOV)
 
 
