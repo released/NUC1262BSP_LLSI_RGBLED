@@ -69,8 +69,6 @@ refer to video under the folder : 0.ENABLE_DEBUG_WS2812_PROTOCOL.MOV
 
 6. with terminal input ( key 1 ~ 9 , a , b , c , d) , to display different color effect
 
-refer to video under the folder 
-
-![video](https://github.com/released/NUC1262BSP_LLSI_RGBLED/blob/main/1.state_Rainbow.MOV)
+refer to each video under the sample code folder 
 
 
